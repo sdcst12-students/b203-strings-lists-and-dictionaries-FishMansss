@@ -7,6 +7,10 @@ def main():
     factors = []
     myNumber = 24
 
-
+    for i in range(myNumber):
+       if (myNumber / (i+1)) == round((myNumber / (i+1)),0):
+           factors.append(i+1)
+    print(factors)
+    return
 if __name__ == "__main__":
     main()
