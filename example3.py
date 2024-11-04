@@ -13,6 +13,9 @@ teachers = {
     "english" : "Westinghouse"
 }
 
+for i in teachers:
+    print( teachers[i] )
+exit()
 print("\nYou can access a single entry of the dictionary using the named key/index\n")
 print(f"teachers[\"math\"] will yield {teachers['math']}")
 input("Press enter to continue")
