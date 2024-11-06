@@ -10,17 +10,11 @@ def squares(n):
     # n should be an integer value
     # x will be the generated dictionary
     x={}
-    for i in range(n):
-        if i**2 == round(i**2,0):
-            x.update({i : i**2})        
+    for i in range(n-1):
+        if (i+1)**2 == round((i+1)**2,0):
+            x.update({(i+1) : (i+1)**2})   
+    print(x)
     return x
 
-
-x = input("input a range: ")
-x = int(x)
-squares(x)
-
-
-'''
 assert squares(8) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}
-assert squares(10) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}'''
+assert squares(10) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
