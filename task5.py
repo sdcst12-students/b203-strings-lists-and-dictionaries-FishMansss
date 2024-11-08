@@ -1,4 +1,4 @@
-possibleItems = { 
+'''possibleItems = { 
         "food" : 0,
         "wate" : 0,
         "rope" : 0,
@@ -24,4 +24,4 @@ def getItem(item, amount):
 def showItem():
     
 
-
+'''
