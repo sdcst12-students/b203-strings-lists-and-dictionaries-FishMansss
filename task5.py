@@ -1,7 +1,7 @@
 import os
 
 
-
+##possible items
 possibleItems = { 
         "food" : 0,
         "wate" : 0,
@@ -17,41 +17,35 @@ possibleItems = {
         "ston" : 0,
         "wool" : 0,
         }
-inventory = {}
-
-def getItem(item):
-    amount0 = possibleItems[item]
-    #inventory.update.possibleitems[item + amount0]
-    # iterate possible Items
-    # if amount of possible item > 0 then add the item to the inventory
-    inventory.update( {item}  )
-    
-   
-x = input("item ")
-y = input("amount ")
-getItem(x)
 
 
 
+     
+##ui + displays
+g=1
+while g==1:
+    os.system('cls')
+    print("get, drop or show item: ")
+    x = input()
+    if x in "get, get item, getitem":
+       
+        print("item: ")
+        item = input()
+        print("amount: ")
+        amount = int(input())
 
+        possibleItems[item] += amount
+        
+    if x in "drop, drop item, dropitem":
+       
+        print("item: ")
+        item = input()
+        print("amount: ")
+        amount = int(input())
+        possibleItems[item] -= amount
+        
 
-
-
-
-
-
-
-'''
-os.system('cls')
-print("get or show item: ")
-x = str(input)
-if x in "get, Get, GET":
-    print("item: ")
-    item = input()
-    print("amount: ")
-    amount = input()
-    getItem(item, amount)
-if x in "show, show item, showitem":
-    print("item")
-    item = input()
-    showItem(item)        '''
+    if x in "show, show item, showitem":
+      
+        print(possibleItems)
+        input('press "ENTER" to continue ')
